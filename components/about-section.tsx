@@ -129,18 +129,16 @@ export default function AboutSection() {
           <TextReveal
             as="span"
             text="Where Royal Heritage Meets"
-            fontSize="clamp(0.95rem, 4.3vw, 2.75rem)"
+            fontSize="clamp(1rem, 4.3vw, 2.75rem)"
             color="#1d4ed8"
-            nowrap
-            className="font-black tracking-tight whitespace-nowrap"
+            className="font-black tracking-tight text-center"
           />
           <TextReveal
             as="span"
             text="Tomorrow's Vision"
             fontSize="clamp(1.15rem, 5.2vw, 3.25rem)"
             color="#1d4ed8"
-            nowrap
-            className="font-black tracking-tight whitespace-nowrap mt-0.5 sm:mt-1"
+            className="font-black tracking-tight text-center mt-0.5 sm:mt-1"
           />
         </h2>
 
