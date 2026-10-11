@@ -1,3 +1,3 @@
-# Anand Rasa
+# Anandotsava
 
-This website is created for **Anand Rasa**, an inter-school literary event organized for Colvin Taluqdars' College.
+This website is created for **Anandotsava**, an inter-school literary event organized for Colvin Taluqdars' College.
