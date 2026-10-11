@@ -92,3 +92,12 @@ body::-webkit-scrollbar {
   will-change: transform;
 }
 
+/* Completely hide Next.js development overlay indicator */
+nextjs-portal,
+[data-nextjs-dev-overlay],
+[data-nextjs-toast],
+div[data-nextjs-dialog-overlay] {
+  display: none !important;
+}
+
+
