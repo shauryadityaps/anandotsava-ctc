@@ -1,8 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary-blue: #2563eb;
+  --accent-cyan: #00bfff;
+  --accent-purple: #7300ff;
+  --accent-lilac: #eba8ff;
+  --accent-amber: #f59e0b;
+  --demo-bg: #ffffff;
+  --demo-text: #1a1a1a;
+}
+
+@font-face {
+  font-family: 'Taste Bread';
+  src: url('/fonts/taste-bread.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
@@ -10,17 +25,70 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-taste-bread: var(--font-taste-bread), 'Taste Bread', cursive, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.font-taste-bread {
+  font-family: var(--font-taste-bread), 'Taste Bread', cursive, sans-serif;
+}
+
+html, body, #anandotsava-root-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  background-color: #0f172a !important;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  html, body, #anandotsava-root-container {
+    overscroll-behavior-y: auto !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
+
+.window-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.window-scrollbar,
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Infinite continuous right-to-left image stream */
+@keyframes imageStreamRtl {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-image-stream-rtl {
+  display: flex;
+  width: max-content;
+  animation: imageStreamRtl 26s linear infinite;
+  will-change: transform;
+}
+
